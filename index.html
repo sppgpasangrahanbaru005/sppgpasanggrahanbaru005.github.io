@@ -143,13 +143,106 @@
             border-top: 1px solid #f1f5f9;
         }
 
+        /* BAGIAN GOOGLE FORM PENILAIAN MENU */
+        .feedback-section {
+            margin-top: 25px;
+            background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+            border: 2px dashed #0284c7;
+            padding: 25px 20px;
+            border-radius: 16px;
+            text-align: center;
+        }
+
+        .feedback-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #0369a1;
+            margin-bottom: 6px;
+        }
+
+        .feedback-desc {
+            font-size: 0.88rem;
+            color: #334155;
+            margin-bottom: 16px;
+        }
+
+        .btn-gform {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background-color: #673ab7; /* Warna khas Google Form */
+            color: white;
+            padding: 12px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            box-shadow: 0 4px 12px rgba(103, 58, 183, 0.3);
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn-gform:hover {
+            transform: translateY(-2px);
+            background-color: #512da8;
+        }
+
+        /* BAGIAN SOCIAL MEDIA */
+        .social-section {
+            margin-top: 20px;
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .social-title {
+            font-size: 0.85rem;
+            font-weight: bold;
+            color: #64748b;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn-social {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            border-radius: 25px;
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-social:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Warna Tombol Medsos */
+        .btn-whatsapp { background-color: #25d366; }
+        .btn-instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+        .btn-tiktok { background-color: #000000; }
+
         /* Footer */
         footer {
             text-align: center;
-            padding: 30px;
+            padding: 25px;
             color: #64748b;
             font-size: 0.85rem;
-            margin-top: 20px;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -158,7 +251,6 @@
     <!-- Header SPPG dengan Logo BGN -->
     <header>
         <div class="header-content">
-            <!-- Logo BGN (Bisa ganti file logo-bgn.png jika punya file lokal di GitHub) -->
             <img class="logo-bgn" src="https://www.bgn.go.id/logo-bgn.png" alt="Logo BGN" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Logo_Badan_Gizi_Nasional.png/480px-Logo_Badan_Gizi_Nasional.png'">
             
             <div class="header-text">
@@ -183,6 +275,33 @@
             <div class="photo-caption">Dokumentasi Sajian Resmi SPPG PASANGGRAHAN BARU 005</div>
         </div>
 
+        <!-- Bagian Google Form Penilaian Menu -->
+        <div class="feedback-section">
+            <div class="feedback-title">📝 Penilaian & Ulasan Menu Hari Ini</div>
+            <div class="feedback-desc">Bantu kami meningkatkan kualitas makanan dengan memberikan masukan melalui formulir di bawah ini.</div>
+            <!-- GANTI TAUTAN GOOGLE FORM ANDA DI SINI -->
+            <a href="https://forms.google.com" target="_blank" class="btn-gform">
+                <span>📋 Isi Penilaian Menu (Google Form)</span>
+            </a>
+        </div>
+
+        <!-- Tombol Sosial Media -->
+        <div class="social-section">
+            <div class="social-title">Hubungi / Ikuti Media Sosial Kami</div>
+            <div class="social-buttons">
+                <!-- GANTI URL DENGAN LINK MEDIA SOSIAL ASLI ANDA -->
+                <a href="https://wa.me/6281234567890" target="_blank" class="btn-social btn-whatsapp">
+                    <span>💬 WhatsApp</span>
+                </a>
+                <a href="https://instagram.com/sppgpasanggrahanbaru005" target="_blank" class="btn-social btn-instagram">
+                    <span>📷 Instagram</span>
+                </a>
+                <a href="https://tiktok.com/@sppgpasanggrahanbaru005" target="_blank" class="btn-social btn-tiktok">
+                    <span>🎵 TikTok</span>
+                </a>
+            </div>
+        </div>
+
     </div>
 
     <!-- Footer -->
@@ -203,7 +322,6 @@
             document.getElementById('auto-date').textContent = hariIni;
         }
 
-        // Jalankan script saat halaman dibuka
         setHariIni();
     </script>
 
